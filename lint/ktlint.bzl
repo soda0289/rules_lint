@@ -104,6 +104,9 @@ def ktlint_action(ctx, executable, srcs, editorconfig, stdout, baseline_file, ja
 
     action_args.add("--relative")
 
+    # Add srcs to cli to avoid linting extra files when not using sandbox
+    action_args.add_all(srcs)
+
     # Include source files and Java runtime files required for ktlint
     inputs = depset(direct = inputs, transitive = [java_runtime_files])
 

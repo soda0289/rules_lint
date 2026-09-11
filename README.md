@@ -145,6 +145,7 @@ Linters which are not language-specific:
 | Kotlin             | [ktfmt]                   | [ktlint]                                                |
 | Markdown           | [Prettier]                | [Vale]                                                  |
 | Pkl                | [pkl]                     |                                                         |
+| PowerShell         |                           | [PSScriptAnalyzer]                                      |
 | Protocol Buffer    | [buf]                     | [buf lint]                                              |
 | Python             | [ruff]                    | [bandit], [flake8], [pydoclint], [pylint], [ruff], [ty] |
 | QML                | [qmlformat]               | [qmllint]                                               |
@@ -209,6 +210,7 @@ Linters which are not language-specific:
 [vale]: https://vale.sh/
 [yamlfmt]: https://github.com/google/yamlfmt
 [yamllint]: https://yamllint.readthedocs.io/en/stable/
+[psscriptanalyzer]: https://github.com/PowerShell/PSScriptAnalyzer
 [rustfmt]: https://rust-lang.github.io/rustfmt
 [stylelint]: https://stylelint.io
 [clippy]: https://github.com/rust-lang/rust-clippy
@@ -248,7 +250,7 @@ We recommend using a Git pre-commit hook to format changed files, and [Aspect Wo
 
 See [Formatting](./docs/formatting.md) for more ways to use the formatter.
 
-Also see [API Documentation](https://registry.bazel.build/docs/aspect_rules_lint#format-defs-bzl)
+Also see [API Documentation](https://registry.bazel.build/modules/aspect_rules_lint/latest/docs/format/defs.bzl)
 
 Demo:
 ![pre-commit format](./docs/format-demo.svg)
@@ -262,7 +264,7 @@ Suggested fixes from the linter tools are presented interactively.
 
 See [Linting](./docs/linting.md) for more ways to use the linter.
 
-Also see [API Documentation](https://registry.bazel.build/docs/aspect_rules_lint)
+Also see [API Documentation](https://registry.bazel.build/modules/aspect_rules_lint/latest/docs)
 
 Demo:
 ![bazel lint demo](./docs/lint-fix-demo.svg)

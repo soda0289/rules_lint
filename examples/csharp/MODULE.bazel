@@ -1,8 +1,9 @@
-"Bazel dependencies for C# formatting example"
+"Bazel dependencies for C# formatting and linting example"
 
 bazel_dep(name = "rules_lint")
 bazel_dep(name = "rules_dotnet", version = "0.20.5")
-bazel_dep(name = "bazel_skylib", version = "1.4.2")
+bazel_dep(name = "bazel_skylib", version = "1.8.2")
+bazel_dep(name = "jq.bzl", version = "0.6.0")
 
 local_path_override(
     module_name = "rules_lint",

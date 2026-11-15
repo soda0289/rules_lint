@@ -196,6 +196,16 @@ bzl_library(
 )
 
 bzl_library(
+    name = "csharp_analyzer",
+    srcs = ["csharp_analyzer.bzl"],
+    deps = [
+        "//lint/private:lint_aspect",
+        "@jq.bzl//jq",
+        "@rules_dotnet//dotnet:defs",
+    ],
+)
+
+bzl_library(
     name = "keep_sorted",
     srcs = ["keep_sorted.bzl"],
     deps = [

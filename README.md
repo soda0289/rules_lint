@@ -132,7 +132,7 @@ Linters which are not language-specific:
 | Language           | Formatter                 | Linter(s)                                               |
 | ------------------ | ------------------------- | ------------------------------------------------------- |
 | C / C++            | [clang-format]            | [clang-tidy] or [cppcheck]                              |
-| C#                 | [CSharpier]               |                                                         |
+| C#                 | [CSharpier]               | [.NET Analyzers] / Roslyn analyzers                     |
 | CUE                | [cue fmt]                 |                                                         |
 | CUDA               | [clang-format]            |                                                         |
 | CSS, Less, SCSS    | [Prettier]                | [Stylelint]                                             |
@@ -171,6 +171,7 @@ Linters which are not language-specific:
 
 [prettier]: https://prettier.io
 [csharpier]: https://csharpier.com/
+[.net analyzers]: https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/overview
 [google-java-format]: https://github.com/google/google-java-format
 [bandit]: https://bandit.readthedocs.io/en/latest/
 [fantomas]: https://fsprojects.github.io/fantomas/

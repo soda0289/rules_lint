@@ -1,4 +1,4 @@
-load("@rules_dotnet//dotnet:defs.bzl", "csharp_binary")
+load("@rules_dotnet//dotnet:defs.bzl", "csharp_binary", "csharp_library")
 
 package(default_visibility = ["//visibility:public"])
 
@@ -8,7 +8,16 @@ csharp_binary(
     target_frameworks = ["net9.0"],
 )
 
+csharp_library(
+    name = "clean_lib",
+    srcs = ["clean_lib.cs"],
+    target_frameworks = ["net9.0"],
+)
+
 filegroup(
     name = "all",
-    srcs = [":hello_csharp"],
+    srcs = [
+        ":clean_lib",
+        ":hello_csharp",
+    ],
 )

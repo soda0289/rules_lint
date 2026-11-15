@@ -43,6 +43,9 @@ bazel_dep(name = "rules_python", version = "0.26.0")
 # Needed in the root because we dereference the toolchain in our aspect impl
 bazel_dep(name = "rules_buf", version = "0.5.2")
 
+# Needed in the root because lint_csharp_analyzer_aspect dereferences the dotnet toolchain and DotnetCSharpAnalyzerInfo
+bazel_dep(name = "rules_dotnet", version = "0.20.5")
+
 bazel_lib_toolchains = use_extension("@bazel_lib//lib:extensions.bzl", "toolchains")
 bazel_lib_toolchains.coreutils()
 use_repo(bazel_lib_toolchains, "coreutils_toolchains")
